@@ -1,0 +1,50 @@
+.App {
+	background: linear-gradient(#222222, #071120);
+	padding-top: 100px;
+	padding-left:75px;
+	padding-right:75px;
+	.heading{
+		display:flex;
+		justify-content: space-between;
+		margin-bottom: 25px;
+	}
+	.heading > h1{
+		color:white;
+		font-family: 'Montserrat';
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.heading .heading__sort {
+			display:flex;
+			align-items: center;
+	}
+	& p {
+		color:white;
+		font-family: 'Montserrat';
+		margin-right: 20px;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	& select {
+		color:white; 
+		background-color: #141414;
+		border:1px solid #717171;
+		opacity: 50%;
+		width: 358px;
+		height: 48px;
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		padding-left: 15px;
+	}
+}
+
+
+
+
+
