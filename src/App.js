@@ -1,4 +1,4 @@
-import AthleteData from "./athletes.json";
+import AthleteData from "./athletes.js";
 import { useState, useEffect } from "react";
 import Cards from "./components/Cards";
 import "./app.scss";
@@ -12,6 +12,7 @@ function App() {
   };
 
   useEffect(() => {}, [order]);
+
   return (
     <div className="App">
       <div className="heading">
@@ -24,7 +25,6 @@ function App() {
           </select>
         </div>
       </div>
-
       <Cards />
     </div>
   );

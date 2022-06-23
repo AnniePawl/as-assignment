@@ -1,0 +1,12 @@
+$blue:#4B7DEE;
+
+*, *::before, *::after {
+	margin:0;
+	box-sizing:border-box;
+}
+
+@mixin center-flex {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,21 @@
+@import './universal-styles.scss';
+
+.button {
+	height:58px;
+	width:100%;
+	border:none;
+	@include center-flex;
+	background-color: $blue;
+	color:white;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;	
+	font-family: 'Montserrat';
+	&:hover{
+		background-color: #2857c5;
+		cursor: pointer;
+	}
+	& > img {
+		margin-left:10px;
+	}
+}

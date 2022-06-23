@@ -1,17 +1,60 @@
-*, *::before, *::after {
-	margin:0;
-	box-sizing:border-box;
-}
+@import './universal-styles.scss';
 
-@mixin center-flex {
-	display:flex;
-	align-items: center;
-	justify-content: center;
-}
+//adjusted sizes slightly for better fit on screen
 
 .cards-container {
+	.cards{
+		display: grid;
+		gap:25px;
+		grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+		.card:hover{
+				box-shadow:0 0 15px 1px $blue;
+		}
+	}
+	.cardTop{
+		height:175px;
+		color:white;
+		.cardTop__dropDate {
+			font-family: Roboto;
+			position:relative;
+			top:20px;
+			left:25px;
+			h3{
+				font-size: 16px;
+			}
+			p{
+				font-family: Roboto;
+				color: #B5B5B5;
+				font-size: 13px;
+				font-weight: 400;
+			}
+		}
+		.cardTop__player{
+			position: relative;
+			top:40px;
+			text-align: center;
+			.name {
+				font-family: Roboto;
+				text-transform: uppercase;
+				font-size: 22px;
+				font-weight: 800;
+			}
+			.link{
+				font-family: Roboto;
+				font-size: 16px;
+				font-style: italic;
+				a{
+					color:white;
+				}
+				img {
+					position:relative;
+					top:5px;
+				}
+			}
+		}
+	}
 	& > h3{
-			color:#3082F9;
+			color:white;
 			text-transform: uppercase;
 			text-align: center;
 			font-family: 'Montserrat';
@@ -20,80 +63,36 @@
 			line-height: 22px;
 			margin-top:90px;
 	}
-}
-
-.cards{
-	display: grid;
-	gap:25px;
-	grid-template-columns: repeat( auto-fit, minmax(360px, 1fr) );
-}
-
-.cardTop{
-	height:200px;
-	color:white;
-	// background:linear-gradient(#5a5a5a, #222222);
-	.cardTop__dropDate {
-		position:relative;
-		top:20px;
-		left:25px;
-		h3{
-			font-family: Roboto;
-			font-size: 18px;
-			font-weight: 600;
-			line-height: 21px;
-			letter-spacing: 0em;
-			text-align: left;
+	.load-more {
+		color:#3082F9;
+		text-transform: uppercase;
+		font-size: 18px;
+		text-align: center;
+		margin-top:75px;
+		margin-bottom: 75px;
+		&:hover{
+			color:white;
+			cursor: pointer;
 		}
-		p{
-			font-family: Roboto;
-			color: #B5B5B5;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 16px;
-			text-align: left;
-		}
-	}
-	.cardTop__player{
-		position: relative;
-		top:40px;
-		.name {
-			font-family: Roboto;
-			text-transform: uppercase;
-			font-size: 24px;
-			font-weight: 800;
-			line-height: 28px;
-			text-align: center;
-		}
-		.link{
-			font-family: Roboto;
-			font-size: 18px;
-			font-style: italic;
-			font-weight: 400;
-			line-height: 21px;
-			text-align: center;
-			a{
-				color:white;
-			}
-			img {
-				position:relative;
-				top:5px;
-			}
-		}
-		
 	}
 }
 
-.cardBottom {
-	height:58px;
-	// width:360px;
-	background-color: #4B7DEE;
-	@include center-flex();
-p {
-	color:white;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 22px;
-	text-transform: uppercase;
-	margin-right:8px;	
+
+//Media Queries 
+@media screen and(max-width:1150px){
+	.cards-container .cards{
+		grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
 	}
 }
+
+// Mobile 
+@media screen and(max-width:605px){
+	.cards-container .cards{
+		grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+	}
+}
+
+
+
+
+

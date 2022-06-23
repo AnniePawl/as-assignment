@@ -29,7 +29,7 @@ export default function Cards() {
           );
         })}
       </div>
-      <h3>Load More Cards</h3>
+      <h2 className="load-more">Load More Athletes</h2>
     </div>
   );
 }

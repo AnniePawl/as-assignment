@@ -1,6 +1,6 @@
 import React from "react";
-import cartLogo from "../assets/cart-logo.png";
 import linkLogo from "../assets/link-logo.png";
+import Button from "./Button";
 import "./cards.scss";
 
 export default function Card(props) {
@@ -16,14 +16,11 @@ export default function Card(props) {
           <h2 className="name">{name}</h2>
           <div className="link">
             <img src={linkLogo} alt="link logo" />
-            <a href="blah">{link}</a>
+            <a href="linkitylink.com">{link}</a>
           </div>
         </div>
       </div>
-      <div className="cardBottom">
-        <p>join drop</p>
-        <img src={cartLogo} alt="cart logo" />
-      </div>
+      <Button />
     </div>
   );
 }
